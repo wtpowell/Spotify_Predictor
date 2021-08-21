@@ -1,21 +1,21 @@
 #theNavbar {
-    background-color: rgb(129, 115, 115);
+    background-color: rgb(25, 20, 20);
     font-weight: bolder;
   }
   #theNavbar .navbar-brand{
-    color: rgb(131, 209, 199);
+    color: rgb(29,185,84);
   }
   #theNavbar .navbar-nav .nav-item .nav-link {
-    color: rgb(131, 209, 199);
+    color: rgb(29,185,84);
   }
   #theNavbar .navbar-nav .nav-item.active .nav-link {
-    color: rgb(131, 209, 199);
+    color: rgb(29,185,84);
   }
   #theNavbar .dropdown-menu {
-    background-color: rgb(129, 115, 115);
+    background-color: rgb(25, 20, 20);
   }
   #theNavbar .dropdown-menu .dropdown-item {
-    color: rgb(131, 209, 199);
+    color: rgb(29,185,84);
   }
   @media (min-width: 767px) {
     #theNavbar .navbar-nav .nav-item .nav-link {
