@@ -56,15 +56,27 @@
                       <span class="section-heading-upper">Spotify Predictor</span>
                       <!-- <span class="section-heading-lower">About Our Project</span> -->
                   </h2>
+                  <h3></h3>
                     <div class="slidecontainer">
                       <p>Danceability</p>
                       <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                      <p>Value: <span id="demo"></span></p>
                       <p>Energy</p>
                       <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                      <p>Value: <span id="demo"></span></p>
                       <p>Tempo</p>
                       <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                      <p>Value: <span id="demo"></span></p>
+                      <script>
+                        var slider = document.getElementById("myRange");
+                        var output = document.getElementById("demo");
+                        output.innerHTML = slider.value;
+                        slider.oninput = function() {
+                          output.innerHTML = this.value;
+                        }
+                        </script>
                     </div>
-                  <p class="mb-3"></p>
+                </h3>
               </div>
           </div>
       </div>

@@ -39,7 +39,7 @@
 
 .slider {
   -webkit-appearance: none;
-  width: 100%;
+  width: 40%;
   height: 25px;
   background: #d3d3d3;
   outline: none;
@@ -57,14 +57,14 @@
   appearance: none;
   width: 25px;
   height: 25px;
-  background: #04AA6D;
+  background: rgb(29,185,84);
   cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
-  background: #04AA6D;
+  background: rgb(29,185,84);
   cursor: pointer;
 }
   
