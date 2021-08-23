@@ -1,21 +1,21 @@
 #theNavbar {
-    background-color: rgb(129, 115, 115);
+    background-color: rgb(25, 20, 20);
     font-weight: bolder;
   }
   #theNavbar .navbar-brand{
-    color: rgb(131, 209, 199);
+    color: rgb(29,185,84);
   }
   #theNavbar .navbar-nav .nav-item .nav-link {
-    color: rgb(131, 209, 199);
+    color: rgb(29,185,84);
   }
   #theNavbar .navbar-nav .nav-item.active .nav-link {
-    color: rgb(131, 209, 199);
+    color: rgb(29,185,84);
   }
   #theNavbar .dropdown-menu {
-    background-color: rgb(129, 115, 115);
+    background-color: rgb(25, 20, 20);
   }
   #theNavbar .dropdown-menu .dropdown-item {
-    color: rgb(131, 209, 199);
+    color: rgb(29,185,84);
   }
   @media (min-width: 767px) {
     #theNavbar .navbar-nav .nav-item .nav-link {
@@ -30,5 +30,41 @@
     /* #theNavbar .dropdown-menu .dropdown-item:hover{
       color: rgb(255, 255, 255); */
     /* } */
+}
+
+/* Sliders */
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 40%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: rgb(29,185,84);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: rgb(29,185,84);
+  cursor: pointer;
 }
   
