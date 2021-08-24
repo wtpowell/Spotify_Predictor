@@ -66,15 +66,8 @@
                       <span style="color:white" class="section-heading-upper">Spotify Predictor</span>
                       <!-- <span class="section-heading-lower">About Our Project</span> -->
                   </h2>
-                  <h3></h3>
                     <div class="slidecontainer">
                       <p>Danceability</p>
-                      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                      <p>Value: <span id="demo"></span></p>
-                      <p>Energy</p>
-                      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                      <p>Value: <span id="demo"></span></p>
-                      <p>Tempo</p>
                       <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
                       <p>Value: <span id="demo"></span></p>
                       <script>
@@ -85,9 +78,33 @@
                           output.innerHTML = this.value;
                         }
                       </script>
+                      <p>Energy</p>
+                      <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
+                      <p>Value: <span id="demo2"></span></p>
+                      <script>
+                        var slider2 = document.getElementById("myRange2");
+                        var output2 = document.getElementById("demo2");
+                        output2.innerHTML = slider.value;
+                        slider2.oninput = function() {
+                          output2.innerHTML = this.value;
+                        }
+                      </script>
+                      <p>Tempo</p>
+                      <input type="range" min="1" max="250" value="50" class="slider" id="myRange3">
+                      <p>Value: <span id="demo3"></span></p>
+                      <script>
+                        var slider3 = document.getElementById("myRange3");
+                        var output3 = document.getElementById("demo3");
+                        output3.innerHTML = slider.value;
+                        slider3.oninput = function() {
+                          output3.innerHTML = this.value;
+                        }
+                      </script>
                     </div>
-                </h3>
+                    <div class="button"><input type="button" class="button" value="Input Button"></div>
+                    <div class="Spotify">
                 <iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </div>
               </div>
           </div>
       </div>
