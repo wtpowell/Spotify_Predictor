@@ -1,0 +1,10 @@
+flask
+gunicorn
+pandas
+numpy
+sklearn
+matplotlib
+dnspython
+tqdm
+scipy
+mpl_toolkits
