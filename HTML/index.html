@@ -90,21 +90,21 @@
                         }
                       </script>
                       <p>Tempo</p>
-                      <input type="range" min="1" max="250" value="50" class="slider" id="myRange3">
+                      <input type="range" min="1" max="250" value1="125" class="slider" id="myRange3">
                       <p>Value: <span id="demo3"></span></p>
                       <script>
                         var slider3 = document.getElementById("myRange3");
                         var output3 = document.getElementById("demo3");
                         output3.innerHTML = slider.value;
                         slider3.oninput = function() {
-                          output3.innerHTML = this.value;
+                        output3.innerHTML = this.value;
                         }
                       </script>
-                    </div>
-                    <div class="button"><input type="button" class="button" value="Input Button"></div>
+                  <div class ="button">
+                   <a href="/app.py/" class="button">Predict Your Song</a></div>
                     <div class="Spotify">
                 <iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                    </div>
+                  </div>
               </div>
           </div>
       </div>

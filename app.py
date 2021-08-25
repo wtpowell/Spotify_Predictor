@@ -15,6 +15,18 @@ from sklearn.cluster import KMeans
 from tqdm import tqdm
 from scipy.spatial.distance import cdist
 
+from flask import Flask, render_template
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+  return render_template('index.html')
+
+@app.route('/my-link/')
+def my_link():
+  print ('I got clicked!')
+
+  return 'Click.'
 
 # # merging available five csv files
 # df = pd.concat(
@@ -131,3 +143,6 @@ class Song_Recommender():
         #Instanstiate the Recommender Class
 recommender = Song_Recommender(df)
 print(recommender.get_recommendations(0.4,0.4,0.8, 5))
+
+if __name__ == '__main__':
+  app.run(debug=True)
