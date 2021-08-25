@@ -11,9 +11,16 @@ from sklearn.cluster import KMeans
 
 from tqdm import tqdm
 
+from sqlalchemy import create_engine
+rds_connection_string = "postgres:group6123@spotify-predictor.cpuqub4subu1.us-east-1.rds.amazonaws.com/spotify_cleaned_data"
+engine = create_engine(f'postgresql://{rds_connection_string}')
+print (engine.table_names())
+df = pd.read_sql_query('''select * from "Spotify_Predictor_Data"''', con=engine)
+print (df)
 
-df = pd.read_csv("fixed_cleaned_spotify_data.csv")
-df.head()
+
+#df = pd.read_csv("fixed_cleaned_spotify_data.csv")
+
 df.describe()
 
 df.info()
@@ -28,6 +35,9 @@ print('After data cleaning',len(df))
 
 df=df.reindex(columns=['danceability','energy','tempo','artist','track','uri'])
 df
+df['danceability'] = pd.to_numeric(df['danceability'])
+df['energy'] = pd.to_numeric(df['energy'])
+df['tempo'] = pd.to_numeric(df['tempo'])
 
 #Normalize function for columns
 def normalize_column(col):
@@ -66,23 +76,23 @@ print(df)
 
 class Song_Recommender():
     def __init__(self, data):
-        self.data = data
+        self.data_ = data
     
    #function that returns recommendations
-    def get_reommendations(self,danceability, energy, tempo, n_top):
+    def get_recommendations(self,danceability, energy, tempo, n_top):
         distances = []
         new_df = {}
         new_df =[danceability,energy,tempo]
         #grabbing all the data except the data entered 
         remaining_data = self.data_[(self.data_.danceability != danceability) & (self.data_.energy != energy )& (self.data_.tempo != tempo)]
         #looping through all the records in the remaining data
-        for i in tqdm(len(remaining_data.values)):
+        for i in tqdm(remaining_data.values):
             #making the distance 0 befoere calculating it for every other record 
             dist = 0
             #looping through all the columns in a record
             for col in np.arange(len(remaining_data.columns)-1):
                 if not col in [3,4,5]:
-                    #The distance measure we used was manhattan 
+                     #The distance measure we used was manhattan 
                     dist = dist + np.absolute(float(new_df[col]) - float(i[col]))
             distances.append(dist)
         remaining_data['distance'] = distances
@@ -92,6 +102,6 @@ class Song_Recommender():
         columns = ['uri']
         return remaining_data[columns][:n_top]
 
-#Instanstiate the Recommender Class
+ #Instanstiate the Recommender Class
 recommender = Song_Recommender(df)
 print(recommender.get_recommendations(0.4,0.4,0.8, 5))
