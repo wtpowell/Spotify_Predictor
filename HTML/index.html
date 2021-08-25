@@ -9,12 +9,14 @@
 
 <style>
   body {
-    background-image:linear-gradient(rgba(214, 214, 214, 0.505), rgba(76, 80, 86, 0.341)), url('https://coolwallpapers.me/th700/2976876-radio___mixed-wallpapers.jpg');
+    background-image:linear-gradient(rgba(214, 214, 214, 0.505), rgba(76, 80, 86, 0.341)), url('https://cdn.vox-cdn.com/thumbor/bm6_5iNVMZGJzWi8Hj-PZOm7Gl8=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/10825345/spotify_volume_getty_ringer.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
   }
   </style>
+
+<!-- https://coolwallpapers.me/th700/2976876-radio___mixed-wallpapers.jpg -->
 
 <body>
     <nav class="navbar navbar-expand-lg text-center navbar-dark" id="theNavbar">
@@ -84,24 +86,24 @@
                       <script>
                         var slider2 = document.getElementById("myRange2");
                         var output2 = document.getElementById("demo2");
-                        output2.innerHTML = slider.value;
+                        output2.innerHTML = slider2.value;
                         slider2.oninput = function() {
                           output2.innerHTML = this.value;
                         }
                       </script>
                       <p>Tempo</p>
-                      <input type="range" min="1" max="250" value1="125" class="slider" id="myRange3">
+                      <input type="range" min="1" max="250" value="125" class="slider" id="myRange3" >
                       <p>Value: <span id="demo3"></span></p>
                       <script>
                         var slider3 = document.getElementById("myRange3");
                         var output3 = document.getElementById("demo3");
-                        output3.innerHTML = slider.value;
+                        output3.innerHTML = slider3.value;
                         slider3.oninput = function() {
                         output3.innerHTML = this.value;
                         }
                       </script>
                   <div class ="button">
-                   <a href="/app.py/" class="button">Predict Your Song</a></div>
+                   <a href="/start" class="button">Predict Your Song</a></div>
                     <div class="Spotify">
                 <iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                   </div>
