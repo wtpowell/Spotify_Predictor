@@ -104,4 +104,9 @@ class Song_Recommender():
 
  #Instanstiate the Recommender Class
 recommender = Song_Recommender(df)
-print(recommender.get_recommendations(0.4,0.4,0.8, 5))
+results = recommender.get_recommendations(0.4,0.4,0.8, 1)
+
+#string spliting
+stringresults = str(results)
+spotifysetup = stringresults.split(':')
+print (f"https://open.spotify.com/embed/{spotifysetup[1]}/{spotifysetup[2]}")
