@@ -9,3 +9,4 @@ flask
 gunicorn
 dnspython
 flask_cors
+pymongo
