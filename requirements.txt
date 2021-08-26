@@ -1,9 +1,8 @@
-matplotlib.pyplot
+matplotlib
 pandas
 numpy
-pandas.io.sql
-sklearn.metrics
-sklearn.cluster
+pandas
+sklearn
 tqdm
 sqlalchemy
 flask
