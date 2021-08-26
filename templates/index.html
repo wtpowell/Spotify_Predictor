@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Project 3</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="../static/style.css">
+
+<style>
+  body {
+    background-image:linear-gradient(rgba(214, 214, 214, 0.505), rgba(76, 80, 86, 0.341)), url('https://cdn.vox-cdn.com/thumbor/bm6_5iNVMZGJzWi8Hj-PZOm7Gl8=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/10825345/spotify_volume_getty_ringer.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  </style>
+
+<!-- https://coolwallpapers.me/th700/2976876-radio___mixed-wallpapers.jpg -->
+
+<body>
+    <nav class="navbar navbar-expand-lg text-center navbar-dark" id="theNavbar">
+        <a class="navbar-brand text-uppercase">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link text-uppercase" href="/">Home</a>
+              </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link text-uppercase" href="aboutus"></a> -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase" href="/process">Process</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-uppercase" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Visualizations
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item text-uppercase" href="/visual1">Visual 1</a>
+                  <a class="dropdown-item text-uppercase" href="/visual2">Visual 2</a>
+                  <!-- <a class="dropdown-item text-uppercase" href=""></a> -->
+                  <!-- <a class="dropdown-item text-uppercase" href=""></a> -->
+                </div>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+      <header>
+        <h1 class="site-heading text-center text-faded d-none d-lg-block">
+            <span class="site-heading-upper text-primary mb-3"></span>
+            <span class="site-heading-lower"></span>
+        </h1>
+    </header>
+
+    <section class="page-section clearfix">
+      <div class="container">
+          <div class="intro">
+              <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="" alt="" />
+              <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                  <h2 class="section-heading mb-4">
+                      <span style="color:white" class="section-heading-upper">Spotify Predictor</span>
+                      <!-- <span class="section-heading-lower">About Our Project</span> -->
+                  </h2>
+                    <div class="slidecontainer">
+                      <p>Danceability</p>
+                      <input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="myRange">
+                      <p>Value: <span id="demo"></span></p>
+                      <script>
+                        var slider = document.getElementById("myRange");
+                        var output = document.getElementById("demo");
+                        output.innerHTML = slider.value;
+                        slider.oninput = function() {
+                          output.innerHTML = this.value;
+                        }
+                      </script>
+                      <p>Energy</p>
+                      <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
+                      <p>Value: <span id="demo2"></span></p>
+                      <script>
+                        var slider2 = document.getElementById("myRange2");
+                        var output2 = document.getElementById("demo2");
+                        output2.innerHTML = slider.value;
+                        slider2.oninput = function() {
+                          output2.innerHTML = this.value;
+                        }
+                      </script>
+                      <p>Tempo</p>
+                      <input type="range" min="1" max="250" value="50" class="slider" id="myRange3">
+                      <p>Value: <span id="demo3"></span></p>
+                      <script>
+                        var slider3 = document.getElementById("myRange3");
+                        var output3 = document.getElementById("demo3");
+                        output3.innerHTML = slider.value;
+                        slider3.oninput = function() {
+                          output3.innerHTML = this.value;
+                        }
+                      </script>
+                    </div>
+                    <div class ="button">
+                      <a href="/start" class="button">Predict Your Song</a></div>
+                    <div class="Spotify">
+                <iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
+        integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
