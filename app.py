@@ -4,15 +4,15 @@ import ml
 
 app = Flask(__name__)
 app.secret_key = "lol"
-@app.route('/', methods = ['GET','POST'])
+@app.route('/')
 def index():
-    if request.method == 'POST':
-        danceability = request.form.get("myRange")
-        energy = request.form.get("myRange2")
-        tempo = request.form.get("myRange3")
+    # if request.method == 'POST':
+    #     danceability = request.form.get("myRange")
+    #     energy = request.form.get("myRange2")
+    #     tempo = request.form.get("myRange3")
         #session["danceability"] = danceability
         #return redirect(url_for('start', danceability=danceability, energy=energy, tempo=tempo))
-        return render_template('start.html', danceability=danceability, energy=energy, tempo=tempo)
+        #return render_template('start.html', danceability=danceability, energy=energy, tempo=tempo)
     return render_template('index.html')
 
 @app.route('/process')
