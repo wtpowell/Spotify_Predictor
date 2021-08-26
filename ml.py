@@ -103,17 +103,18 @@ class Song_Recommender():
         columns = ['uri']
         return remaining_data[columns][:n_top]
 
+def test1(dance, energy, tempo):
 #Instanstiate the Recommender Class
-recommender = Song_Recommender(df)
-results = recommender.get_recommendations(0.4,0.4,0.8, 1)
+    recommender = Song_Recommender(df)
+    #results = recommender.get_recommendations(0.4,0.4,0.8, 1)
+    results = recommender.get_recommendations(dance/100, energy/100, tempo/100, 1)
 
 #string spliting
 
-stringresults = str(results)
-spotifysetup = stringresults.split(':')
-verygoodvariable = "https://open.spotify.com/embed/{}/{}".format(spotifysetup[1],spotifysetup[2])
-print (verygoodvariable)
-
+    stringresults = str(results)
+    spotifysetup = stringresults.split(':')
+    verygoodvariable = "https://open.spotify.com/embed/{}/{}".format(spotifysetup[1],spotifysetup[2])
+    return verygoodvariable
 
 #output = execute('/start')
 

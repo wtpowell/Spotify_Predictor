@@ -1,0 +1,11 @@
+matplotlib.pyplot
+pandas
+numpy
+pandas.io.sql
+sklearn.metrics
+sklearn.cluster
+tqdm
+sqlalchemy
+flask
+gunicorn
+dnspython

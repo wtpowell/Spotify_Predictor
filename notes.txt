@@ -1,0 +1,16 @@
+========== GET ROUTE ===========
+python = GET
+html = GET
+
+
+======= POST ROUTE ===============
+python = POST
+html = POST
+
+
+============== EXTRA FILES NEEDED TO DEPLOY ====================
+Procfile
+requirements.txt
+runtime.txt
+wsgi.py
+.gitignore
