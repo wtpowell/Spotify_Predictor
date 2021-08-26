@@ -62,10 +62,10 @@ for i in range(1, 10):
     cost.append(KM.inertia_)     
 
 # plot the cost against K values
-plt.plot(range(1, 10), cost, color ='g', linewidth ='3')
-plt.xlabel("Value of K")
-plt.ylabel("Sqaured Error (Cost)")
-plt.show() 
+# plt.plot(range(1, 10), cost, color ='g', linewidth ='3')
+# plt.xlabel("Value of K")
+# plt.ylabel("Sqaured Error (Cost)")
+# plt.show() 
 
 #Predictions using K-means
 kmeans = KMeans(n_clusters = 5)
