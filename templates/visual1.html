@@ -4,96 +4,110 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="../static/style.css">
+
+<!-- <style>
+  body {
+    background-image: url('data:image/png;base64,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');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  </style> -->
+
 <body>
   <nav class="navbar navbar-expand-lg text-center navbar-dark" id="theNavbar">
     <li class="nav-item active">
-        <a class="navbar-brand text-uppercase" href="/">Visual 1</a>
-      </li>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link text-uppercase" href="/">Home</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link text-uppercase" href="start.html">Player</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="/process">Process</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-uppercase" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Visualizations
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item text-uppercase" href="/visual1">Decades</a>
-                <a class="dropdown-item text-uppercase" href="/visual2">Pie-Keys</a>
-                <!-- <a class="dropdown-item text-uppercase" href=""></a> -->
-                <!-- <a class="dropdown-item text-uppercase" href=""></a> -->
-              </div>
-            </li>
-        </ul>
-      </div>
-    </nav>
+      <a class="navbar-brand text-uppercase" href="/">Home</a>
+    </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <header>
-      <h1 class="site-heading text-center text-faded d-none d-lg-block">
-          <span class="site-heading-upper mb-3"></span>
-          <span class="site-heading-lower"></span>
-      </h1>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <!-- <li class="nav-item active">
+              <a class="nav-link text-uppercase" href="/">Home</a>
+            </li> -->
+        <li class="nav-item active">
+          <a class="nav-link text-uppercase" href="start.html">Player</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase" href="/process">Process</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-uppercase" href="#" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Visualizations
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item text-uppercase" href="/visual1">Decades</a>
+            <a class="dropdown-item text-uppercase" href="/visual2">Pie-Keys</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <h1 class="site-heading text-center text-faded d-none d-lg-block">
+      <span class="site-heading-upper mb-3"></span>
+      <span class="site-heading-lower"></span>
+    </h1>
   </header>
 
   <section class="page-section clearfix">
     <div class="container">
-        <div class="tableau">
-            <div class="tableau-text left-0 text-center bg-faded p-5 rounded">
-                <h2 class="section-heading mb-4">
-                    <span class="section-heading-upper"></span>
-                    <span class="section-heading-lower">About the Visualization</span>
-                </h2>
-                <p class="mb-3"></p>
-            </div>
+      <div class="tableau">
+        <div class="tableau-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-upper"></span>
+            <span class="section-heading-lower">About the Visualization</span>
+          </h2>
+          <p class="mb-3">The below visualiations were sourced from Tableau via Packed Bubbles, Box-and-Whisker Plots
+            and Stacked Bars. Each visual provides an interactive tool tip that provides a different view of each
+            decades average tempo, danceability and energy. </p>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
 
-<div class='tableauPlaceholder' id='viz1629845492470' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpotifyPredictorVisualizationDashboard&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SpotifyPredictorVisualizationDashboard&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpotifyPredictorVisualizationDashboard&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1629845492470');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='2000px';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='2000px';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1477px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+  <div class='tableauPlaceholder' id='viz1629845492470' style='position: relative'><noscript><a href='#'><img
+          alt='Dashboard 1 '
+          src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpotifyPredictorVisualizationDashboard&#47;Dashboard1&#47;1_rss.png'
+          style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+      <param name='embed_code_version' value='3' />
+      <param name='site_root' value='' />
+      <param name='name' value='SpotifyPredictorVisualizationDashboard&#47;Dashboard1' />
+      <param name='tabs' value='no' />
+      <param name='toolbar' value='yes' />
+      <param name='static_image'
+        value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpotifyPredictorVisualizationDashboard&#47;Dashboard1&#47;1.png' />
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+      <param name='language' value='en-US' />
+    </object></div>
+  <script
+    type='text/javascript'>                    var divElement = document.getElementById('viz1629845492470'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '2000px'; vizElement.style.minHeight = '587px'; vizElement.style.maxHeight = '887px'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '2000px'; vizElement.style.minHeight = '587px'; vizElement.style.maxHeight = '887px'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '1477px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
 
-  <!-- <div class='tableauPlaceholder' id='viz1626820960595' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TourdataBarGraph&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TourdataBarGraph&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TourdataBarGraph&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1626820960595');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
-<div class='tableauPlaceholder' id='viz1629563871028' style='position: relative'><noscript><a href='#'>
-  <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpotifyPredictorVisualizationDashboard&#47;Dashboard1&#47;1_rss.png' style='border: none'/>
-</a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-  <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
-  <param name='name' value='SpotifyPredictorVisualizationDashboard&#47;Dashboard1' />
-  <param name='tabs' value='no' /><param name='toolbar' value='yes' />
-  <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpotifyPredictorVisualizationDashboard&#47;Dashboard1&#47;1.png' /> 
-  <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
-  <param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' />
-  </object></div><script type='text/javascript'>                    
-  var divElement = document.getElementById('viz1629563871028');                    
-  var vizElement = divElement.getElementsByTagName('object')[0];                    
-  if ( divElement.offsetWidth > 800 ) { vizElement.style.width='2000px';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';
-  vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
-  else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='2000px';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';
-  vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1977px';}                     
-  var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
-  vizElement.parentNode.insertBefore(scriptElement, vizElement);</script> -->
 
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
-      integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"></script>
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
 </body>
+
 </html>

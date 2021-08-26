@@ -19,7 +19,7 @@
 <body>
   <nav class="navbar navbar-expand-lg text-center navbar-dark" id="theNavbar">
     <li class="nav-item active">
-      <a class="navbar-brand text-uppercase" href="/">Process</a>
+      <a class="navbar-brand text-uppercase" href="/">Home</a>
     </li>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -27,9 +27,9 @@
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <!-- <li class="nav-item active">
               <a class="nav-link text-uppercase" href="/">Home</a>
-            </li>
+            </li> -->
             <li class="nav-item active">
               <a class="nav-link text-uppercase" href="start.html">Player</a>
             </li>
@@ -61,9 +61,9 @@
             <img class="process-img img-fluid mb-3 mb-lg-0 rounded" src="" alt="" />
             <div class="process-text left-0 text-center bg-faded p-5 rounded">
                 <h2 class="section-heading mb-4">
-                    <span style="color:rgb(85, 202, 120)"="section-heading-lower">About the Process</span>
+                    <span style="color:rgb(40, 107, 60)"="section-heading-lower">About the Process</span>
                 </h2>
-                <p style="color:white" class="mb-3"> The purpose of this project was to incorporate Machine Learning (ML) into a Spotify dataset that would predict a desired song that best matches a user input. We began by identifying CSV's from kaggle.com that provided various song metrics over multiple decades. From there we cleaned the data through Pandas to create a combined CSV from 1960s-2010s. Once we had the data compiled into one CSV we began identifying which song metrics would resonate most with users. We landed on Energy, Temp and Danceability as desired metrics users would most likely associate song selection with. In order to provide this user experience we created a dynamic range slider using HTML, CSS, and JavaScript to display the user's selected value for danceability, energy, and tempo. Each value is passed through our machine learning application  </p>
+                <p style="color:white; font-size:20px"> The purpose of this project was to incorporate Machine Learning (ML) into a Spotify dataset that would predict a desired song that best matches a user input. We began by identifying CSV's from kaggle.com that provided various song metrics over multiple decades. From there we cleaned the data through Pandas to create a combined CSV from 1960s-2010s. Once we had the data compiled into one CSV we began identifying which song metrics would resonate most with users. We landed on Energy, Temp and Danceability as desired metrics users would most likely associate song selection with. In order to provide this user experience we created a dynamic range slider using HTML, CSS, and JavaScript to display the user's selected value for danceability, energy, and tempo. As we are building a model for recommendation systems, we have adopted one of the models which uses the user’s history already in the system as this dataset has some good amount of user data to base our decisions on. One of them is clustering algorithms and we thought to use K-means clustering algorithm for our model. We use elbow method to estimate the k-value. As a result the user will be provided with a song that best matches their desired energy, danceability and tempo via our ML Spotify Predictor.  </p>
             </div>
         </div>
     </div>
