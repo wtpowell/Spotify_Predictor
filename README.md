@@ -1,5 +1,18 @@
 # Spotify_Predictor
 
+Team 6:
+Sindhura Surapaneni
+Clay Bazzle
+Al Burroughs
+Supraja Koppisetty
+William Powell
+Chuck Youngman
+
+
+This project includes a Python, Pandas, HTML/CSS, JS, SQL, ML(K-mean/value), Flask and Tableau. 
+
+
+
 The purpose of this project was to incorporate Machine Learning (ML) into a Spotify dataset that would predict a desired song that best matches a user input. 
 We began by identifying CSV's from kaggle.com that provided various song metrics over multiple decades.
 From there we cleaned the data through Pandas to create a combined CSV from 1960s-2010s. 
