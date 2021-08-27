@@ -9,8 +9,7 @@ William Powell
 Chuck Youngman
 
 
-This project includes a Python, Pandas, HTML/CSS, JS, SQL, ML(K-mean/value), Flask and Tableau. 
-
+This project includes Python, Pandas, HTML/CSS, JS, SQL, ML(K-mean/value), Flask and Tableau. 
 
 
 The purpose of this project was to incorporate Machine Learning (ML) into a Spotify dataset that would predict a desired song that best matches a user input. 
